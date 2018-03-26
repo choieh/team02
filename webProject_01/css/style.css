@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+/*  Reset CSS  */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#555; }
+img { border:0;}
+body { font:12px/1.6 arial; color:#555; }
+
+header{width: 100%; height: 723px;}
+
+#menu{position: fixed; right: 30px; top:38%; }
+#menu ul li a{font-size: 18px; color: #fff; }
+#menu ul li{margin-bottom: 20px;}
+#menu ul li.on{transform: scale(1.5); }
+
+.main{background: linear-gradient( to bottom, #f7cac9, #92a8d1 );}
+
+.download{height: 80px;}
+.download .down{margin-top: 15px;}
+.download .down>a{display: inline-block; border: 4px solid #fff; font-size: 20px; padding: 5px; color: #fff;
+text-decoration: none;}
+
+.main-con ul{margin-left: 30%; margin-top: 10%;}
+.main-con li{font-size: 100px; color: #fff;}
+.main-con>img{width: 800px; margin-left: -182px;}
+
+
+section{width: 100%; height: 723px;}
+#menu1{background: #aaa;}
+#menu2{background: #bbb;}
+#menu3{background: #ccc;}
+
+footer{background: #f7cac9; width: 100%; height: 723px;}
+footer .qr{width: 100%; height: 600px;}
+footer .qr>img{margin-left: 41%; margin-top: 15%;}
+footer .phonebtn{width: 100%; height: 100px;}
+footer .phonebtn #android{width: 150px; margin-left: 39.5%;}
+footer .phonebtn #apple{width: 150px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */

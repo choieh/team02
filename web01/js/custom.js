@@ -1,16 +1,21 @@
 $(document).ready(function(){
 
 
-$(".down>a").on('click',function(e){
-	e.preventDefault();//anchor이벤트의 기본동작을 막는다.
-	var thisTarget = $(this).attr("href");
-	$(window).scrollTop($(thisTarget).offset().top);
-});
+	$(".down>a").on("click",function(e){
+			e.preventDefault();
+
+			var ht = $(".row").height();
+			var qr = $("#menu>li:last").index();
+			var nowTop = ht*qr;
+
+			$('html, body').stop().animate({"scrollTop":nowTop},500);
+		});
+
 
 $("#menu li").on("click",function(e){
 		e.preventDefault();
 
-		var ht = $(".menu-con>div").height();
+		var ht = $(".row").height();
 		var i = $(this).index();
 		var nowTop = i *(ht);
 
@@ -19,7 +24,7 @@ $("#menu li").on("click",function(e){
 
 	$(window).on('scroll',function(){
 
-		var ht = $(".menu-con>div").height();
+		var ht = $(".row").height();
 		var scroll = $(window).scrollTop();
 
 		for(var i=0;i<6;i++){
@@ -29,6 +34,8 @@ $("#menu li").on("click",function(e){
 			}
 		}
 	});
+
+
 
 });
 

@@ -12,8 +12,52 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<script>document.documentElement.className = 'js';</script>
+
+		<style>
+		/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.modal-content>p{height: 700px;}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+		</style>
 	</head>
 	<body>
+
 		<svg class="hidden">
 			<symbol id="icon-arrow" viewBox="0 0 24 24">
 				<title>arrow</title>
@@ -90,7 +134,6 @@
 					</div>
 					<div class="room__side room__side--bottom"></div>
 				</div><!-- 최은혜/room -->
-
 			</div>
 		</div><!-- /container -->
 		<div class="content">
@@ -123,7 +166,10 @@
 					<h2 class="slide__name">Kim <br/>Deaseung</h2>
 					<h3 class="slide__title">
 						<span>&ldquo;Understanding Life&rdquo;</span>
-						<div class="slide__number">Room <strong>Tenjin</strong></div>
+						<div class="slide__number">
+							<button id="myBtn">Open Modal</button>
+						</div>
+
 					</h3>
 					<p class="slide__date">25 Mar – 11 May 2017</p>
 				</div> <!--김대승 -->
@@ -159,6 +205,17 @@
 					</svg>
 				</button>
 			</nav>
+
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p>Some text in the Modal..</p>
+				</div>
+
+			</div>
 		</div><!-- /content -->
 		<div class="overlay overlay--loader overlay--active">
 			<div class="loader">
@@ -170,5 +227,34 @@
 		<script src="js/anime.min.js"></script>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/main.js"></script>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal
+			btn.onclick = function() {
+					modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+					modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+					if (event.target == modal) {
+							modal.style.display = "none";
+					}
+			}
+			</script>
+
 	</body>
 </html>

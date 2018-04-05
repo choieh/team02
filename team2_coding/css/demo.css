@@ -41,6 +41,9 @@ a:focus {
 	margin: 0 auto;
 	fill: currentColor;
 }
+.icon--arrow-rot {
+	transform: rotate(180deg);
+}
 
 .btn {
 	position: relative;
@@ -270,6 +273,123 @@ a:focus {
 	-webkit-writing-mode: vertical-rl;
 	writing-mode: vertical-rl;
 }
+/* detail slide */
+.detailSlides {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+
+}
+.details {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+}
+
+.detail {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	opacity: 0;
+	pointer-events: none;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+.slide__img {
+	position: absolute;
+	top: -200px;
+	left: -200px;
+	width: calc(100% + 400px);
+	height: calc(100% + 400px);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.slidenav {
+	position: absolute;
+	width: 300px;
+	margin-left: -150px;
+	left: 50%;
+	bottom: 0;
+	text-align: center;
+	padding: 2em;
+}
+.slidenav__item {
+	border: 0;
+	background: none;
+	font-weight: bold;
+	color: var(--color-nav);
+}
+
+.slidenav__item:focus {
+	outline: none;
+}
+
+.slidenav__item:hover {
+	color: var(--color-nav-hover);
+}
+.shape {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	fill: var(--color-shape-fill);
+	top: 0;
+	pointer-events: none;
+}
+.detail_title {
+	position: relative;
+	font-size: var(--fontsize-stitle);
+	margin: 0;
+	cursor: default;
+	line-height: 1;
+	color: var(--color-stitle);
+}
+.slide__desc {
+	position: relative;
+	font-size: 1.5em;
+	margin: 0 0 2em 0;
+	cursor: default;
+	color: var(--color-sdesc);
+	padding: 0 1em;
+	text-align: center;
+}
+.slide__link {
+	position: relative;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 1em 2em;
+	display: block;
+	color: var(--color-slink);
+	background: var(--color-slink-bg);
+	transition: color 0.3s, background 0.3s;
+}
+
+.slide__link:hover {
+	color: var(--color-slink-hover);
+	background: var(--color-slink-hover-bg);
+}
+
+.closeBtn {
+	position: absolute;
+	width: 300px;
+	margin-left: -150px;
+	left: 95%;
+	top: 0;
+	text-align: center;
+	padding: 2em;
+	color: #bbb;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+
 
 /* Slides */
 .slides {
@@ -283,9 +403,11 @@ a:focus {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 70vw;
+	width: 80vw;
+	/* width: 70vw; */
 	height: 100%;
-	margin: 7vh 0 0 10vw;
+	margin: 0;
+	/* margin: 0 0 0 10vw; */
 	pointer-events: none;
 	opacity: 0;
 }
@@ -336,7 +458,72 @@ a:focus {
 	padding: 0.4em 0.5em 0.25em 0.5em;
 	color: #fff;
 	background: #c2292e;
+	cursor: pointer;
 }
+
+/* demo-1 */
+.demo-1,.demo-2,.demo-3 {
+	--color-text: #000;
+    --color-bg: #f1f1f1;
+    --color-link: #000;
+    --color-link-hover: #0e54c1;
+    --color-stitle: #000;
+    --fontsize-stitle: 12vw;
+    --color-sdesc: #000;
+    --color-slink: #000;
+    --color-slink-hover: #000;
+    --color-slink-bg: #fff;
+    --color-slink-hover-bg: #0e54c1;
+    --color-nav: #000;
+    --color-nav-hover: #0E54CA;
+		position:fixed;
+}
+
+/* Fade effect */
+.js body {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.js body.render {
+	opacity: 1;
+}
+
+/* Page Loader */
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--color-bg);
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 100000;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	pointer-events: none;
+	border-radius: 50%;
+	opacity: 0.4;
+	background: var(--color-link);
+	animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 1;
+		transform: scale3d(0.5,0.5,1);
+	}
+}
+
 
 /* Nav */
 .nav {

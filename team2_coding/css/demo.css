@@ -378,15 +378,16 @@ a:focus {
 
 .closeBtn {
 	position: absolute;
-	width: 300px;
-	margin-left: -150px;
-	left: 95%;
-	top: 0;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+	background: rgba(0,0,0,0.5);
+	right: 30px;
+  top: 30px;
 	text-align: center;
-	padding: 2em;
-	color: #bbb;
-	font-size: 30px;
+	color: #fff;
 	cursor: pointer;
+	padding-top: 0.25em;
 }
 
 

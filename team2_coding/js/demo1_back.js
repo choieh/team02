@@ -147,16 +147,14 @@
                         translateX: [dir === 'next' ? 200 : -200, 0]
                     });
 
-                  /*  상세 슬라이드 넘겨질때 영향있음  
-
-									anime({
+                    anime({
                         targets: [newSlide.querySelector('.slide__title'), newSlide.querySelector('.slide__desc'), newSlide.querySelector('.slide__link')],
                         duration: this.settings.animation.slides.duration*2,
                         easing: this.settings.animation.slides.easing,
                         delay: (t,i) => i*100+100,
                         translateX: [dir === 'next' ? 300 : -300,0],
                         opacity: [0,1]
-                    });*/
+                    });
                 });
             };
 
@@ -178,5 +176,5 @@
     new Slideshow(document.querySelector('.slideshow1'));
 		new Slideshow(document.querySelector('.slideshow2'));
 		new Slideshow(document.querySelector('.slideshow3'));
-
+    
 };

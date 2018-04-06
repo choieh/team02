@@ -13,6 +13,8 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/masonry.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/kanban.css">
 		<script>document.documentElement.className = 'js';</script>
 		<script src="js/jquery-2.1.1.min.js"></script>
 
@@ -362,24 +364,98 @@
 
 							<div id="page-mask"></div>
 						</div>
-
-					<!-- <h2 class="slide__title detail_title">Massive</h2>
-					<p class="slide__desc">The thoughtful making of space is an art.</p> -->
-
 				</div> <!--/2 -->
 
 				<div class="slide detail">
-					<div class="slide__img" style="background-image: url(img/slide_img/27.jpg)"></div>
-					<h2 class="slide__title detail_title">Towering</h2>
-					<p class="slide__desc">If a building becomes architecture, then it is art.</p>
-					<a class="slide__link" href="#">Find out more</a>
-				</div>
-				<div class="slide detail">
-					<div class="slide__img" style="background-image: url(img/slide_img/28.jpg)"></div>
-					<h2 class="slide__title detail_title">Immense</h2>
-					<p class="slide__desc">Architecture is a visual art, and the buildings speak for themselves.</p>
-					<a class="slide__link" href="#">Uncover beauty</a>
-				</div>
+
+					<!--  -->
+
+					<div class="add-task-container">
+						<input type="text" maxlength="12" id="taskText" placeholder="New Task..." onkeydown="if (event.keyCode == 13)
+																	document.getElementById('add').click()">
+						<button id="add" class="button add-button" onclick="addTask()">Add New Task</button>
+					</div>
+
+						<div class="container task-con">
+						<ul class="columns">
+
+							<li class="column to-do-column">
+								<div class="column-header">
+									<h4>To Do</h4>
+								</div>
+								<ul class="task-list" id="to-do">
+									<li class="task">
+										<p>Analysis</p>
+									</li>
+									<li class="task">
+										<p>Coding</p>
+									</li>
+									<li class="task">
+										<p>Card Sorting</p>
+									</li>
+									<li class="task">
+										<p>Measure</p>
+									</li>
+								</ul>
+							</li>
+
+							<li class="column doing-column">
+								<div class="column-header">
+									<h4>Doing</h4>
+								</div>
+								<ul class="task-list" id="doing">
+									<li class="task">
+										<p>Hypothesis</p>
+									</li>
+									<li class="task">
+										<p>User Testing</p>
+									</li>
+									<li class="task">
+										<p>Prototype</p>
+									</li>
+								</ul>
+							</li>
+
+							<li class="column done-column">
+								<div class="column-header">
+									<h4>Done</h4>
+								</div>
+								<ul class="task-list" id="done">
+									<li class="task">
+										<p>Ideation</p>
+									</li>
+									<li class="task">
+										<p>Sketches</p>
+									</li>
+								</ul>
+							</li>
+
+							<li class="column trash-column">
+								<div class="column-header">
+									<h4>Trash</h4>
+								</div>
+								<ul class="task-list" id="trash">
+									<li class="task">
+										<p>Interviews</p>
+									</li>
+									<li class="task">
+										<p>Research</p>
+									</li>
+
+								</ul>
+								<div class="column-button">
+									<button class="button delete-button" onclick="emptyTrash()">Delete</button>
+								</div>
+							</li>
+
+						</ul>
+						</div>
+
+					<!--  -->
+					<!-- <div class="slide__img" style="background-image: url(img/slide_img/27.jpg)"></div> -->
+
+				</div> <!--/3 -->
+
 			</div>
 			<div class="closeBtn">
 				<i class="fa fa-chevron-left"></i>
@@ -402,6 +478,8 @@
 		<script src="js/main.js"></script>
 		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 		<script src="js/masonry.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
+		<script src="js/kanban.js"></script>
 
 		<!-- detail slide  -->
 		<script>

@@ -425,9 +425,9 @@ a:focus {
 	padding: 0 0 0 5vw;
 	text-indent: -5vw;
 	letter-spacing: -0.05em;
-	text-transform: lowercase;
 	color: #fff;
 }
+
 
 .slide__title,
 .slide__date {

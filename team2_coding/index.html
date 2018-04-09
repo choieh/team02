@@ -426,7 +426,7 @@
 				<!--/3 -->
 
 			</div>
-			<div class="closeBtn">
+			<div class="closeBtn close_3">
 				<i class="fa fa-chevron-left"></i>
 			</div>
 			<nav class="slidenav">
@@ -481,10 +481,18 @@
 						}*/
 				});
 
+				 //공통부분
 					$(".closeBtn").click(function(){
+							$(".panel").stop().animate({"left":"-80%"}, 500);
+					});
+
+					//최은혜 부분
+					$(".close_3").click(function(){
 							$(".panel").stop().animate({"left":"-80%"}, 500);
 							$(".slide_con_3").stop().animate({"opacity":1}, 300);
 					});
+
+
 			});
 
 		</script>

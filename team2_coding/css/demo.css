@@ -196,6 +196,11 @@ a:focus {
 	transform: translate3d(0,0,10px);
 	backface-visibility: hidden;
 }
+.demo3_box_img{
+	opacity: 0.8;
+}
+
+
 
 /* Content */
 .content {

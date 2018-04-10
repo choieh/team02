@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Cutive+Mono|Fjalla+One|Quicksand|Playfair+Display|Open+Sans|Rock+Salt|VT323|Cedarville+Cursive|Permanent+Marker|Nothing+You+Could+Do|Caveat:400,300);
+
+ .portrait{
+   height: 240px;
+   alight: left;
+ }
+ .picture6{
+   height: 184px;
+ }
+ .picture2{
+   height: 240px;
+ }
+ .picture3{
+   height: 184px;
+ }
+ .picture4{
+height: 184px;
+ }
+ .picture5{
+   height: 184px;
+ }
+ .picture1{
+   height: 240px;
+ }
+.picture7{
+   height: 188px;
+ }
+.picture8{
+   height: 188px;
+ }
+.picture9{
+   height: 188px;
+ }
+.picture10{
+   height: 188px;
+ }
+
+ .image-row{
+    text-align:center;
+ }
+
+.image-row div {
+  display: inline-block;
+}
+.hover-effect * {
+ box-sizing: border-box;
+}
+
+.hover-effect {
+ position: relative;
+ display: inline-block;
+ overflow: hidden;
+ max-width: 100%;
+ height: auto;
+}
+.image-row:last-child .hover-effect .text{
+ top: 10%;
+}
+
+.row_list:first-child{
+  padding-top: 400px;
+}
+
+.hover-effect .text{
+ font-family: 'Nothing You Could Do';
+ font-weight: lighter;
+ font-size: 16px;
+ color: #000000;
+ visibility: hidden;
+ position: absolute;
+ display: inline-block;
+ text-align: center;
+ top: 20%;
+ bottom: 10%;
+ left: 15%;
+ right: 15%;
+}
+.hover-effect:hover img{
+ opacity: 0;
+ transition: all 0.1s ease-in-out 0.1s;
+}
+.hover-effect:hover .text{
+ visibility: visible;
+}
+
+.wiki-link {
+ width: 30px;
+ padding-top: 30px;
+ padding-bottom: 50px;
+}
+.wiki-hover-effect{
+ position: relative;
+ overflow: hidden;
+ display: block;
+ height: auto;
+ text-align: center;
+}
+.wiki-hover-effect:hover img{
+ opacity: 0.5;
+ transition: all 0.1s ease-in-out 0s;
+}
+.link {
+ content: url("http://simpleicon.com/wp-content/uploads/link-2.png");
+ width: 10px;
+}

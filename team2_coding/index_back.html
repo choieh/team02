@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>3D Room Exhibition | Codrops</title>
+		<meta name="description" content="An experimental 3D room template that aims to show exhibition details in an interesting way" />
+		<meta name="keywords" content="3d, room, exhibition, gallery, perspective, animation, web design, template" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/masonry.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/kanban.css">
+		<link rel="stylesheet" type="text/css" href="css/cursor_event.css">
+		<script>document.documentElement.className = 'js';</script>
+		<script src="js/jquery-2.1.1.min.js"></script>
+
+		<style>
+
+/* slide */
+.demo-1, .demo-2, .demo-3{width
+	:80%; position:fixed; height:100%; left:-80%; top:0;}
+
+	/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.img_list{margin: 20px;}
+
+.imgs{
+    margin: 20px;
+  }
+		</style>
+	</head>
+	<body>
+
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>개발02팀</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-menu" viewBox="0 0 24 24">
+				<title>menu</title>
+				<path d="M24,5.8H0v-2h24V5.8z M19.8,11H4.2v2h15.6V11z M24,18.2H0v2h24V18.2z"/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 24">
+				<title>cross</title>
+				<path d="M13.4,12l7.8,7.8l-1.4,1.4l-7.8-7.8l-7.8,7.8l-1.4-1.4l7.8-7.8L2.7,4.2l1.4-1.4l7.8,7.8l7.8-7.8l1.4,1.4L13.4,12z"/>
+			</symbol>
+			<symbol id="icon-info" viewBox="0 0 20 20">
+				<title>info</title>
+				<circle style="fill:#fff" cx="10" cy="10" r="9.1"/>
+				<path d="M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0z M10,18.6c-4.7,0-8.6-3.9-8.6-8.6S5.3,1.4,10,1.4s8.6,3.9,8.6,8.6S14.7,18.6,10,18.6z M10.7,5C10.9,5.2,11,5.5,11,5.7s-0.1,0.5-0.3,0.7c-0.2,0.2-0.4,0.3-0.7,0.3c-0.3,0-0.5-0.1-0.7-0.3C9.1,6.2,9,6,9,5.7S9.1,5.2,9.3,5C9.5,4.8,9.7,4.7,10,4.7C10.3,4.7,10.5,4.8,10.7,5z M9.3,8.3h1.4v7.2H9.3V8.3z"/>
+			</symbol>
+		</svg>
+		<div class="container">
+			<div class="scroller">
+				<div class="room room--current">
+					<div class="room__side room__side--back">
+						<img class="room__img" src="img/set4/3.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set4/6.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--left">
+						<img class="room__img" src="img/set4/7.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set4/1.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set4/2.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--right">
+						<img class="room__img" src="img/set4/4.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set4/5.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set4/8.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--bottom"></div>
+				</div><!-- 김대승/room -->
+				<!-- 남현주 room img -->
+				<div class="room">
+					<div class="room__side room__side--back">
+						<img class="room__img" src="img/set2/1-1.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set2/6-1.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--left">
+						<img class="room__img" src="img/set2/3-1.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set2/4-1.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set2/5-1.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--right">
+						<img class="room__img" src="img/set2/8-1.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set2/7-1.jpg" alt="Some image"/>
+						<img class="room__img" src="img/set2/2-1.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--bottom"></div>
+				</div><!-- 남현주/room -->
+				<div class="room">
+					<div class="room__side room__side--back">
+						<img class="room__img demo3_box_img" src="img/slide_img/17.jpg" alt="Some image"/>
+						<img class="room__img demo3_box_img" src="img/slide_img/18.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--left">
+						<img class="room__img demo3_box_img" src="img/slide_img/19.jpg" alt="Some image"/>
+						<img class="room__img demo3_box_img" src="img/slide_img/20.jpg" alt="Some image"/>
+						<img class="room__img demo3_box_img" src="img/slide_img/21.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--right">
+						<img class="room__img demo3_box_img" src="img/slide_img/22.jpg" alt="Some image"/>
+						<img class="room__img demo3_box_img" src="img/slide_img/23.jpg" alt="Some image"/>
+						<img class="room__img demo3_box_img" src="img/slide_img/24.jpg" alt="Some image"/>
+					</div>
+					<div class="room__side room__side--bottom"></div>
+				</div><!-- 최은혜/room -->
+			</div>
+		</div><!-- /container -->
+		<div class="content">
+			<header class="codrops-header">
+				<h1 class="codrops-header__title">Team 02</h1>
+				<!-- <div class="subject">개발02팀</div> -->
+				<button class="btn btn--info btn--toggle">
+					<svg class="icon icon--info"><use xlink:href="#icon-info"></use></svg>
+					<svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+				</button>
+				<button class="btn btn--menu btn--toggle">
+					<svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
+					<svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg>
+				</button>
+				<div class="overlay overlay--menu">
+					<ul class="menu">
+						<li class="menu__item menu__item--current"><a class="menu__link" href="#">Exhibitions</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Discover</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Visit us</a></li>
+						<li class="menu__item"><a class="menu__link" href="#">Shop</a></li>
+					</ul>
+				</div>
+				<div class="overlay overlay--info">
+					<p class="info">&ldquo;Life in Pieces&rdquo; is the subject of all exhibitions taking place in the Mirai Art Gallery in 2017. Fragments of lost memories, fleeting moments and the breaking apart of human nature are this year's highlighted topics. We welcome you to a exploration space of a unique kind&mdash;the one that will stay with you and impact you on many levels. Come visit us.</p>
+				</div>
+			</header>
+			<h4 class="location">Coding Project &amp;HIMEDIA GANGNAM CENTER </h4>
+			<div class="slides">
+
+				<div class="slide slide_1 slide_con_1">
+					<h2 class="slide__name">Kim <br/>Daeseung</h2>
+					<h3 class="slide__title">
+						<span>&ldquo;Understanding Life&rdquo;</span>
+						<div class="slide__number number_1">
+							<span>Slide</span>
+						</div>
+					</h3>
+
+					<p class="slide__date">15 Jan – 18 Apr 2018</p>
+				</div> <!--김대승 -->
+
+				<div class="slide slide_1 slide_con_2">
+					<h2 class="slide__name">Nam <br/>Hyunjoo</h2>
+					<h3 class="slide__title">
+						<span>&ldquo;Faces of Peace&rdquo;</span>
+						<div class="slide__number number_2">
+							<span>Slide</span>
+						</div>
+					</h3>
+					<p class="slide__date">15 Jan – 18 Apr 2018</p>
+				</div><!--남현주 -->
+
+				<div class="slide slide_1 slide_con_3">
+					<h2 class="slide__name">Choi <br/>Eunhye</h2>
+					<h3 class="slide__title">
+						<span>&ldquo;The beginning is half of the whole.&rdquo;</span>
+						<div class="slide__number number_3">
+							<span>Slide</span>
+						</div>
+					</h3>
+					<p class="slide__date">15 Jan – 18 Apr 2018</p>
+				</div><!--최은혜 -->
+
+			</div>
+
+			<nav class="nav">
+				<button class="btn btn--nav btn--nav-left">
+					<svg class="nav-icon nav-icon--left" width="42px" height="12px" viewBox="0 0 70 20">
+						<path class="nav__triangle" d="M52.5,10L70,0v20L52.5,10z"/>
+						<path class="nav__line" d="M55.1,11.4H0V8.6h55.1V11.4z"/>
+					</svg>
+				</button>
+				<button class="btn btn--nav btn--nav-right">
+					<svg class="nav-icon nav-icon--right" width="42px" height="12px" viewBox="0 0 70 20">
+						<path class="nav__triangle" d="M52.5,10L70,0v20L52.5,10z"/>
+						<path class="nav__line" d="M55.1,11.4H0V8.6h55.1V11.4z"/>
+					</svg>
+				</button>
+			</nav>
+
+			</div>
+		</div><!-- /content -->
+		<div class="overlay overlay--loader overlay--active">
+			<div class="loader">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+<!-- demo1 김대승 -->
+
+<div class="demo-1 panel panel-1">
+		<div class="slideshow1 detailSlides">
+			<div class="slides details">
+				<div class="slide slide--current detail kimDetail_1">
+					<!-- follow cursor -->
+
+				<div class="slide__img" style="background-image: url(img/slide_img/s6.jpg); z-index:-110; opacity:1;" >
+					<div id="cursor">
+					  <div id="circle"></div>
+					</div>
+				</div>
+				</div>
+
+				<div class="slide detail">
+					<div class="slide__img" style="background-image: url(img/slide_img/s2.jpg)"></div>
+					<h2 class="slide__title detail_title">Massive</h2>
+					<p class="slide__desc">The thoughtful making of space is an art.</p>
+					<a class="slide__link" href="#">Discover art</a>
+				</div>
+				<div class="slide detail">
+					<div class="slide__img" style="background-image: url(img/slide_img/s3.jpg)"></div>
+					<h2 class="slide__title detail_title">Towering</h2>
+					<p class="slide__desc">If a building becomes architecture, then it is art.</p>
+					<a class="slide__link" href="#">Find out more</a>
+				</div>
+				<div class="slide detail">
+					<div class="slide__img" style="background-image: url(img/slide_img/s9.jpg)"></div>
+					<h2 class="slide__title detail_title">Immense</h2>
+					<p class="slide__desc">Architecture is a visual art, and the buildings speak for themselves.</p>
+					<a class="slide__link" href="#">Uncover beauty</a>
+				</div>
+			</div>
+			<div class="closeBtn">
+				<i class="fa fa-chevron-left"></i>
+			</div>
+			<nav class="slidenav">
+				<button class="slidenav__item slidenav__item--prev">Previous</button>
+				<span>/</span>
+				<button class="slidenav__item slidenav__item--next">Next</button>
+			</nav>
+
+
+
+		</div>
+
+
+</div><!--/ +-1  -->
+
+<!-- demo2 남현주 -->
+<div class="demo-1 panel panel-2">
+		<div class="slideshow2 detailSlides">
+			<div class="slides details">
+
+				<div class="slide slide--current detail">
+					<div class="slide__img" style="background-image: url(img/slide_img/22.jpg)"></div>
+					<h2 class="slide__title detail_title">Massive</h2>
+					<p class="slide__desc">The thoughtful making of space is an art.</p>
+					<a class="slide__link" href="#">Discover art</a>
+				</div>
+				<div class="slide detail">
+					<div class="slide__img" style="background-image: url(img/slide_img/23.jpg)"></div>
+					<h2 class="slide__title detail_title">Towering</h2>
+					<p class="slide__desc">If a building becomes architecture, then it is art.</p>
+					<a class="slide__link" href="#">Find out more</a>
+				</div>
+				<div class="slide detail">
+					<div class="slide__img" style="background-image: url(img/slide_img/24.jpg)"></div>
+					<h2 class="slide__title detail_title">Immense</h2>
+					<p class="slide__desc">Architecture is a visual art, and the buildings speak for themselves.</p>
+					<a class="slide__link" href="#">Uncover beauty</a>
+				</div>
+				<div class="slide detail">
+					<div class="slide__img" style="background-image: url(img/slide_img/ve.jpg)"></div>
+					<h2 class="slide__title detail_title">PORTFOLIO</h2>
+					<p class="slide__desc">Look around my portfolio site.</p>
+					<a class="slide__link" href="#">More</a>
+				</div>
+
+			</div>
+			<div class="closeBtn">
+				<i class="fa fa-chevron-left"></i>
+			</div>
+			<nav class="slidenav">
+				<button class="slidenav__item slidenav__item--prev">Previous</button>
+				<span>/</span>
+				<button class="slidenav__item slidenav__item--next">Next</button>
+			</nav>
+
+		</div>
+
+</div><!--/ demo-2  -->
+
+
+<!-- demo3 : 최은혜 -->
+<div class="demo-1 panel panel-3">
+		<div class="slideshow3 detailSlides">
+			<div class="slides details">
+
+				<div class="slide detail slide--current">
+					<!--  -->
+					<p class="to-do-title">To do List</p>
+					<div class="add-task-container">
+						<input type="text" maxlength="12" id="taskText" placeholder="New Task..." onkeydown="if (event.keyCode == 13)
+																	document.getElementById('add').click()">
+						<button id="add" class="button add-button" onclick="addTask()">Add</button>
+					</div>
+
+						<div class="container task-con">
+						<ul class="columns">
+
+							<li class="column to-do-column">
+								<div class="column-header">
+									<h4>To Do</h4>
+								</div>
+								<ul class="task-list" id="to-do"></ul>
+							</li>
+
+							<li class="column doing-column">
+								<div class="column-header">
+									<h4>Doing</h4>
+								</div>
+								<ul class="task-list" id="doing"></ul>
+							</li>
+
+							<li class="column done-column">
+								<div class="column-header">
+									<h4>Done</h4>
+								</div>
+								<ul class="task-list" id="done"></ul>
+							</li>
+
+							<li class="column trash-column">
+								<div class="column-header">
+									<h4>Trash</h4>
+								</div>
+								<ul class="task-list" id="trash">
+
+								</ul>
+								<div class="column-button">
+									<button class="button delete-button" onclick="emptyTrash()">Delete</button>
+								</div>
+							</li>
+
+						</ul>
+						</div>
+
+					<!--  -->
+					<div class="slide__img" style="background:url(img/slide_img/mw2.jpg); z-index:-100; opacity:0.5;"></div>
+
+				</div> <!--/1 -->
+
+				<!-- masonry gallery -->
+				<div class="slide detail">
+					<div class="slide__img" style="background:#ddd">
+					<!-- masonry gallery  -->
+					 <div class="grid">
+							<div class="grid-sizer"></div>
+									<div class="grid-item">
+									<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+									</div>
+									<div class="grid-item">
+									<img data-title="This is a title" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="This is title"/>
+									</div>
+									<div class="grid-item">
+									<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="This is a title"/>
+									</div>
+									<div class="grid-item">
+									<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+									</div>
+									<div class="grid-item">
+									<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+									</div>
+									<div class="grid-item">
+									<img src="img/slide_img/17.jpg" />
+									</div>
+									<div class="grid-item">
+									<img src="img/slide_img/18.jpg" />
+									</div>
+									<div class="grid-item">
+									<img src="img/slide_img/19.jpg" />
+									</div>
+									<div class="grid-item">
+									<img src="img/slide_img/20.jpg" />
+									</div>
+							</div>
+							<div class="img-box">
+							<div id="img-box">
+
+							</div>
+							<div class="close-btn"><div class="symbol">&times;</div></div>
+							</div>
+
+							<div id="page-mask"></div>
+						</div>
+				</div> <!--/2 -->
+
+				<div class="slide detail">
+					<div class="slide__img" style="background:url(img/slide_img/choi_1.jpg)"></div>
+					 <h2 class="slide__title detail_title">PORTFOLIO</h2>
+					<p class="slide__desc">Look around my portfolio.</p>
+					<a class="slide__link" href="#">More</a>
+				</div>
+				<!--/3 -->
+
+			</div>
+			<div class="closeBtn close_3">
+				<i class="fa fa-chevron-left"></i>
+			</div>
+			<nav class="slidenav">
+				<button class="slidenav__item slidenav__item--prev">Previous</button>
+				<span>/</span>
+				<button class="slidenav__item slidenav__item--next">Next</button>
+			</nav>
+
+		</div>
+
+</div><!--/ demo-3  -->
+
+<!--/demo-->
+	<script src="js/default.js"></script>
+	<script src="js/default1.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+		<script src="js/masonry.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.js"></script>
+		<script src="js/kanban.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+		<script src="js/cursor_event.js"></script>
+
+		<!-- detail slide  -->
+		<script>
+			$(document).ready(function(){
+				$(".number_1").click(function(){
+					$(".number_1").toggleClass("on");
+						if($(".number_1").hasClass("on")){
+								$(".panel-1").stop().animate({"left":0}, 500);
+						} else {
+							$(".panel-1").stop().animate({"left":"-80%"}, 500);
+						}
+				});
+				$(".number_2").click(function(){
+					$(".number_2").toggleClass("on");
+						if($(".number_2").hasClass("on")){
+								$(".panel-2").stop().animate({"left":0}, 500);
+						} else {
+							$(".panel-2").stop().animate({"left":"-80%"}, 500);
+						}
+				});
+				$(".number_3").click(function(){
+					$(".number_3").toggleClass("on");
+						if($(".number_3").hasClass("on")){
+								$(".panel-3").stop().animate({"left":0}, 500);
+								$(".slide_con_3").stop().animate({"opacity":0}, 300);
+						}
+						/*else {
+							$(".panel-3").stop().animate({"left":"-80%"}, 500);
+
+						}*/
+				});
+
+				 //공통부분
+					$(".closeBtn").click(function(){
+							$(".panel").stop().animate({"left":"-80%"}, 500);
+					});
+
+					//최은혜 부분
+					$(".close_3").click(function(){
+							$(".panel").stop().animate({"left":"-80%"}, 500);
+							$(".slide_con_3").stop().animate({"opacity":1}, 300);
+					});
+
+
+			});
+
+		</script>
+
+	</body>
+</html>

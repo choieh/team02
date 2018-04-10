@@ -1,0 +1,130 @@
+
+
+#mainContent {
+  display: flex;
+  background: url('https://i.cdn.turner.com/adultswim/big/img/2013/10/24/webs.png') center top no-repeat;
+  padding: 40px 0 200px 0;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 1345px) {
+  #mainContent {
+    flex-direction: column;
+  }
+}
+.sharebox {
+  position: absolute;
+  top: 77px;
+  right: 15px;
+  height: 30px;
+  width: 240px;
+  z-index: 4;
+}
+
+.sharebox .left {
+  float: left;
+  margin-right: 10px;
+}
+
+.sharebox .right {
+  float: left;
+}
+
+#mainContent .frame {
+  background: url('https://i.cdn.turner.com/adultswim/big/img/2013/10/24/frame-sprite.png');
+  width: 358px;
+  height: 442px;
+  margin: 40px auto;
+  position: relative;
+  padding: 51px;
+}
+
+#mainContent .frame .inner {
+  background: url('https://i.cdn.turner.com/adultswim/big/img/2013/10/24/frame-sprite.png');
+  position: relative;
+  z-index: 2;
+}
+
+#mainContent .frame#tim {
+  background-position: left top;
+}
+
+#mainContent .frame#tim .inner {
+  background-position: -465px -48px;
+  width: 100%;
+  height: 100%;
+  /*left: 51px;
+				top: 49px;*/
+}
+
+#mainContent .frame#eric {
+  background-position: left -546px;
+}
+
+#mainContent .frame#eric .inner {
+  background-position: -507px -597px;
+  width: 100%;
+  height: 100%;
+}
+
+#mainContent .frame#skel {
+  background-position: left -1092px;
+}
+
+#mainContent .frame#skel .inner {
+  background-position: -512px -1143px;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* eyeball stuff */
+
+.frame .eyeball {
+  background: url('https://i.cdn.turner.com/adultswim/big/img/2013/10/24/eyeball.png') no-repeat;
+  width: 41px;
+  height: 41px;
+  position: absolute;
+}
+
+.frame .eyeball span,
+.pupil {
+  background: url('https://i.cdn.turner.com/adultswim/big/img/2013/10/24/pupil.png') no-repeat;
+  display: block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 40%;
+  left: 30%
+  margin: 100px;
+}
+
+.frame#tim .eyeball.left {
+  left: 119px;
+  top: 195px;
+}
+
+.frame#tim .eyeball.right {
+  left: 196px;
+  top: 189px;
+}
+
+.frame#eric .eyeball.left {
+  left: 128px;
+  top: 165px;
+}
+
+.frame#eric .eyeball.right {
+  left: 201px;
+  top: 170px;
+}
+
+.frame#skel .eyeball.left {
+  left: 151px;
+  top: 103px;
+}
+
+.frame#skel .eyeball.right {
+  left: 212px;
+  top: 110px;
+}

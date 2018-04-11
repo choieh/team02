@@ -20,6 +20,7 @@
 		<link rel="stylesheet" type="text/css" href="css/modal.css">
 		<link rel="stylesheet" type="text/css" href="css/kim_gallery.css">
 		<link rel="stylesheet" type="text/css" href="css/nam_effect1.css">
+		<link rel="stylesheet" type="text/css" href="css/flexbox.css">
 		<script>document.documentElement.className = 'js';</script>
 		<script src="js/jquery-2.1.1.min.js"></script>
 
@@ -218,7 +219,7 @@
 				</div> <!--김대승 -->
 
 				<div class="slide slide_1 slide_con_2">
-					<h2 class="slide__name">Nam <br/>Hyunjoo</h2>
+					<h2 class="slide__name" style="font-family:'Josefin Sans'">Nam <br/>Hyunjoo</h2>
 					<h3 class="slide__title">
 						<span>&ldquo;Faces of Peace&rdquo;</span>
 						<div class="slide__number number_2">
@@ -229,7 +230,7 @@
 				</div><!--남현주 -->
 
 				<div class="slide slide_1 slide_con_3">
-					<h2 class="slide__name">Choi <br/>Eunhye</h2>
+					<h2 class="slide__name" style="font-family:'Josefin Sans'">Choi <br/>Eunhye</h2>
 					<h3 class="slide__title">
 						<span>&ldquo;The beginning is half of the whole.&rdquo;</span>
 						<div class="slide__number number_3">
@@ -397,11 +398,35 @@
 							   </div>
 							  </div>
 				</div>
-				<div class="slide detail">
-					<div class="slide__img" style="background-image: url(img/slide_img/23.jpg)"></div>
-					<h2 class="slide__title detail_title">Massive</h2>
-					<p class="slide__desc">The thoughtful making of space is an art.</p>
-					<a class="slide__link" href="#">Discover art</a>
+				<div class="slide detail flex_box">
+					<div class="boxs">
+			      <div class="box box1">
+			        <p>Hey</p>
+			        <p>No</p>
+			        <p>One Save You</p>
+			      </div>
+			      <div class="box box2">
+			        <p>Give</p>
+			        <p>One</p>
+			        <p>Chance</p>
+			      </div>
+			      <div class="box box3">
+			        <p>Only You</p>
+			        <p>Can</p>
+			        <p>Save Yourself</p>
+			      </div>
+			      <div class="box box4">
+			        <p>No one</p>
+			        <p>Save</p>
+			        <p>You </p>
+			      </div>
+			      <div class="box box5">
+			        <p>Only</p>
+			        <p>You</p>
+			        <p>Can...</p>
+			      </div>
+			    </div>
+					<div class="slide__img" style="background-image: url(img/slide_img/23.jpg); z-index:-100; opacity:0.5;" ></div>
 				</div>
 				<div class="slide detail">
 					<div class="slide__img" style="background-image: url(img/slide_img/ve.jpg)"></div>
@@ -562,6 +587,7 @@
 		<script src="js/kanban.js"></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 		<script src="js/cursor_event.js"></script>
+		<script src="js/flexbox.js"></script>
 		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
 		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
 		<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>

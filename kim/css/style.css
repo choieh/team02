@@ -34,7 +34,12 @@ a:hover{text-decoration:none;}
 }
 
 .t1{font-size: 140px;}
-.t2{position: absolute; left: 10%; font-size: 40px;margin-top: 250px;}
+.t2{position: absolute; left: 5%; font-size: 40px;margin-top: 250px;letter-spacing: 0.5em;}
+
+.font-effect-neon .t2{
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f,0 0 0.6em #3d58ff, 0 0 0.8em #3d58ff, 0 0 1.0em #3d58ff, 0 0 1.2em #f0f!important;
+  color: #fff;
+}
 
 .wrap{width: 100%; height: auto; overflow: hidden;}
 .wrap>div{float:left; height:948px; width:50%;}

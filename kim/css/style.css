@@ -27,14 +27,14 @@ a:hover{text-decoration:none;}
   color:white;
     font-size: 60px;
   padding-left:2px;
-  padding-top:15%;
+  padding-top:10%;
   margin-bottom:0px;
-  left: 20%;
+  left: 10%;
 
 }
 
 .t1{font-size: 140px;}
-.t2{position: absolute; left: 10%; font-size: 40px;}
+.t2{position: absolute; left: 10%; font-size: 40px;margin-top: 250px;}
 
 .wrap{width: 100%; height: auto; overflow: hidden;}
 .wrap>div{float:left; height:948px; width:50%;}

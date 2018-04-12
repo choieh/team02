@@ -58,10 +58,10 @@ h1{font-size: 100px; font-family: Fugaz One; color: #fff; width: 30%; margin: 0 
 
 
 
-h2{font-size: 40px; font-family: Fugaz One; color: #4224f4; width: 50%; margin: 0 auto; margin-top: 40%;letter-spacing: 0.3em; }
+h2{font-size: 40px; font-family: Fugaz One; color: #4224f4; width: 50%; margin: 0 auto; margin-top: 35%;letter-spacing: 0.3em; }
 
 
-div>a{text-decoration: none; font-size: 20px; color: #000; margin-left: 25%; font-family: Fugaz One; position: relative; top: 50px; letter-spacing: 0.1em;}
+div>a{text-decoration: none; font-size: 20px; color: #000; margin-left: 25%; font-family: Fugaz One; position: relative; top: 50px; letter-spacing: 0.1em; line-height: 4;}
 
 .main i{font-size: 20px; color: #000; position: relative; left: 20px; animation:ani linear 1.5s 1.0s infinite;}
 .fa-angle-double-right{color:#000!important;}

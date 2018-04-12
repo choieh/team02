@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One');
-
+@import url('https://fonts.googleapis.com/css?family=Gugi');
 *{margin:0; padding:0; box-sizing:border-box;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{border:0; font-family:inherit; font-size:100%; font-weight:inherit; margin:0; outline:0; padding:0; vertical-align:baseline;}
 
@@ -24,24 +24,27 @@ a:hover{text-decoration:none;}
 .wrap>div:nth-child(1){width:100%;}
 
 
-.main{width: 100%; height: 500px; background: url(../img/main.jpg) no-repeat center;}
-h1{font-size: 100px; font-family: Fugaz One; color: #fff; width: 30%; margin: 0 auto; margin-top: 400px; left: 20px; letter-spacing: 0.1em;}
+.main{width: 100%; height: 900px; background: url(../img/main.jpg) no-repeat center; background-size: contain; background-color: #060405;}
+h1{font-size: 100px; font-family:gugi; color: #fff; width: 30%; margin: 160px; auto; margin-top: 400px; left: 20px; letter-spacing: 0.1em;}
 
-.p1{background: #f6ddda;}
-.p2{background: #efc4c1;}
-.p3{background: #e9aaa8;}
-.p4{background: #e39190;}
+p{font-size:20px;color:#000;margin-left: 240px;font-family: Gugi;color: BLACK;margin-left: 10%;}
+
+H4{font-size: 20PX;margin-left: 240PX;font-family: Gugi;}
+.p1{background: #f6e6f8;}
+.p2{background: #eaccf3;}
+.p3{background: #d7a2e6;}
+.p4{background: #c981dd;}
 
 
 
 
 
-.p1-img{background: url(../img/p1-1.jpg) no-repeat center; background-size: cover; background-attachment:fixed; position:relative;}
+.p1-img{background: url(../img/p1-1.jpg); background-size: contain; background-attachment:fixed; position:relative;}
 .p1-img>span{display:block; width:100%; height:100%; position:absolute; left:0; top:0; opacity:0.3; background:#fff;}
 
 .p2-img{background: url(../img/p6.jpg) no-repeat center; background-size: cover;}
 
-.p3-img{background: url(../img/p9.jpg) no-repeat right; background-size: contain; background-attachment:fixed; position:relative;}
+.p3-img{background: url(../img/p9.jpg) right; background-size: contain; background-attachment:fixed; position:relative;}
 .p3-img>span{display:block; width:100%; height:100%; position:absolute; left:0; top:0; opacity:0.3; background:#fff;}
 
 .p4-img{background: url(../img/p3.jpg) no-repeat center; background-size: cover;}
@@ -49,10 +52,10 @@ h1{font-size: 100px; font-family: Fugaz One; color: #fff; width: 30%; margin: 0 
 
 
 
-h2{font-size: 40px; font-family: Fugaz One; color: #4224f4; width: 50%; margin: 0 auto; margin-top: 40%;letter-spacing: 0.3em; }
+h2{font-size: 40px; font-family: gugi; color: #4224f4; width: 50%; margin-left: 10%;auto; margin-top: 20%;letter-spacing: 0.3em; }
 
 
-a{text-decoration: none; font-size: 20px; color: #000; margin-left: 25%; font-family: Fugaz One; position: relative; top: 50px; letter-spacing: 0.1em;}
+a{text-decoration: none; font-size: 25PX;; color: #000; margin-left: 50%; font-family: gugi; position: relative; top: 30PX; letter-spacing: 0.1em;}
 
 i{font-size: 120px; color: #000; position: relative; left: 20px; animation:ani linear 1.5s 1.0s infinite;}
 

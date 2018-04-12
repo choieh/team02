@@ -21,7 +21,9 @@ a:hover{text-decoration:none;}
 /* layout */
 .wrap{width: 100%; height: auto; overflow: hidden;}
 .wrap>div{float:left; height:948px; width:50%;}
-.wrap>div:nth-child(1){width:100%;}
+.wrap>div:nth-child(2){width:100%;}
+
+
 
 
 .main{width: 100%; height: 500px; background: url(../img/main.jpg) no-repeat center;}
@@ -31,6 +33,13 @@ h1{font-size: 100px; font-family: Fugaz One; color: #fff; width: 30%; margin: 0 
 .p2{background: #efc4c1;}
 .p3{background: #e9aaa8;}
 .p4{background: #e39190;}
+
+.nav{position: fixed;height: 250px; right: 50px; top: 350px; z-index: 1;}
+.nav>ul>li{ margin-right: 50px;  position: relative; letter-spacing: 0.1em; margin-bottom: 50px; list-style: none;}
+.nav>ul>li>a>i{color: #fff; font-size: 18px;}
+
+.nav_list>li>p{position:absolute; color:#fff; width:120px; height:40px; right:-50px; top:-6px; opacity:0; font-size: 18px; font-family:Fugaz One; margin: 0 auto; cursor: pointer;}
+.nav_list>li>p.on{right:50px; opacity:1; transition:all 0.6s ease;}
 
 
 
@@ -49,13 +58,13 @@ h1{font-size: 100px; font-family: Fugaz One; color: #fff; width: 30%; margin: 0 
 
 
 
-h2{font-size: 40px; font-family: Fugaz One; color: #4224f4; width: 50%; margin: 0 auto; margin-top: 40%;letter-spacing: 0.3em; }
+h2{font-size: 40px; font-family: Fugaz One; color: #4224f4; width: 50%; margin: 0 auto; margin-top: 35%;letter-spacing: 0.3em; }
 
 
-a{text-decoration: none; font-size: 20px; color: #000; margin-left: 25%; font-family: Fugaz One; position: relative; top: 50px; letter-spacing: 0.1em;}
+div>a{text-decoration: none; font-size: 20px; color: #000; margin-left: 25%; font-family: Fugaz One; position: relative; top: 50px; letter-spacing: 0.1em; line-height: 4;}
 
-i{font-size: 120px; color: #000; position: relative; left: 20px; animation:ani linear 1.5s 1.0s infinite;}
-
+.main i{font-size: 20px; color: #000; position: relative; left: 20px; animation:ani linear 1.5s 1.0s infinite;}
+.fa-angle-double-right{color:#000!important;}
 
 @keyframes ani {
    0%{
@@ -67,5 +76,7 @@ i{font-size: 120px; color: #000; position: relative; left: 20px; animation:ani l
      right: 100px;
      transform: scale(2);
      opacity: 0;
-   }
+   }s
 }
+
+/* .nav_list>i{font-size: 120px; color: #000; position: relative; left: 20px; animation:ani2 linear 1.5s 1.0s infinite;} */

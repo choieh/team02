@@ -17,7 +17,7 @@
           <div id="header" class="font-effect-neon">
               <div class="t1">
                  PORTFOLIO
-              </div> <br><br>
+              </div>
               <div class="t2">
                  KIM DAE SEUNG
               </div>
@@ -26,6 +26,7 @@
           <span>PORTFOLIO</span>KIM DAE SEUNG</p> -->
       </div>
       <div class="p1 main">
+        <div class="arti"></div>
         <h2>01 <br> APP PROJECT</h2><br><br>
         <p>- 어플리케이션 프로젝트입니다.</p><br><br>
 
@@ -36,10 +37,33 @@
 
 
       </div>
+      <script type="text/javascript">
+        $(document).ready(function(){
+
+
+          $(window).on("scroll", function(){
+            var scl = $(window).scrollTop();
+            /*if(scl > 700){
+              $(".arti").stop().animate({
+                "left":"-100%"
+              }, 800)
+            } else {
+              $(".arti").stop().animate({
+                "left":0
+              });
+            };*/
+            $(".arti").stop().animate({
+              "left":-scl
+            });
+          });
+
+        })
+      </script>
       <div class="p1-img main">
         <span></span>
       </div>
       <div class="p2 main">
+        <div class="arti"></div>
         <h2>02 <br> WEB PROJECT</h2><br><br>
         <p>- 웹페이지 프로젝트입니다.</p>
 
@@ -56,6 +80,7 @@
 
       </div>
       <div class="p3 main">
+        <div class="arti"></div>
         <h2>03 <br> CORDING PROJECT</h2><br><br>
         <p>- 코딩 프로젝트입니다.</p>
         <a href="http://www.dabipyeung.com/hmedia/team_02/" target="_blank">VIEW WEBSITE  <i class="fa fa-angle-double-right"></i></a>

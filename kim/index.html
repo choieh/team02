@@ -11,9 +11,18 @@
     <script type="text/javascript" src="js/custom.js"></script>
   </head>
   <body>
+    <div class="clone-header">
+      <ul>
+        <li> <a href="#page0">HOME</a> </li>
+        <li> <a href="#page1">APP</a> </li>
+        <li> <a href="#page2">WEB</a> </li>
+        <li> <a href="#page3">CORDING</a> </li>
+        <li> <a href="#page4">CONTEST</a> </li>
+      </ul>
+    </div>
     <div class="wrap">
 
-      <div class='main'>
+      <div class='main' id="page0">
           <div id="header" class="font-effect-neon">
               <div class="t1">
                  PORTFOLIO
@@ -25,73 +34,53 @@
         <!-- <p id="header" class="font-effect-neon">
           <span>PORTFOLIO</span>KIM DAE SEUNG</p> -->
       </div>
-      <div class="p1 main">
-        <div class="arti"></div>
+      <div class="p1 main" id="page1">
+        <div class="arti1"></div>
         <h2>01 <br> APP PROJECT</h2><br><br>
         <p>- 어플리케이션 프로젝트입니다.</p><br><br>
 
-        <a href="download/app project2.pdf" target="_blank">CHIYO  <i class="fa fa-angle-double-right"></i></a> <br> <br><br>
-        <a href="download/app project.pdf" target="_blank">MIDME  <i class="fa fa-angle-double-right"></i></a> <br> <br><br>
-        <a href="download/app project3.pdf" target="_blank">WETHER CAPSULE  <i class="fa fa-angle-double-right"></i></a> <br> <br><br>
-        <a href="download/app project4.pdf" target="_blank">TUTLE RUNNING  <i class="fa fa-angle-double-right"></i></a> <br> <br><br>
+        <a href="download/app project2.pdf" target="_blank">CHIYO<i class="fa fa-angle-double-right"></i></a> <br> <br><br>
+        <a href="download/app project.pdf" target="_blank">MIDME<i class="fa fa-angle-double-right"></i></a> <br> <br><br>
+        <a href="download/app project3.pdf" target="_blank">WETHER CAPSULE<i class="fa fa-angle-double-right"></i></a> <br> <br><br>
+        <a href="download/app project4.pdf" target="_blank">TUTLE RUNNING<i class="fa fa-angle-double-right"></i></a> <br> <br><br>
 
 
       </div>
-      <script type="text/javascript">
-        $(document).ready(function(){
 
-
-          $(window).on("scroll", function(){
-            var scl = $(window).scrollTop();
-            /*if(scl > 700){
-              $(".arti").stop().animate({
-                "left":"-100%"
-              }, 800)
-            } else {
-              $(".arti").stop().animate({
-                "left":0
-              });
-            };*/
-            $(".arti").stop().animate({
-              "left":-scl
-            });
-          });
-
-        })
-      </script>
-      <div class="p1-img main">
+      <div class="p1-img main" >
         <span></span>
       </div>
-      <div class="p2 main">
-        <div class="arti"></div>
+      <div class="p2 main" id="page2">
+        <div class="arti2"></div>
         <h2>02 <br> WEB PROJECT</h2><br><br>
         <p>- 웹페이지 프로젝트입니다.</p>
 
-        <a href="http://www.dabipyeung.com/pai/" target="_blank">PAI WEBSITE  <i class="fa fa-angle-double-right"></i></a> <br>
-        <a href="download/app project4.pdf" target="_blank">PLANNING   <i class="fa fa-angle-double-right"></i></a><br><br> <br><br><br>
+        <a href="http://www.dabipyeung.com/pai/" target="_blank">PAI WEBSITE<i class="fa fa-angle-double-right"></i></a> <br>
+        <a href="download/WEB project1.pdf" target="_blank">PLANNING<i class="fa fa-angle-double-right"></i></a><br><br> <br><br><br>
 
         <a href="http://www.beyondfoodlab.com/" target="_blank">BEYONDFOODLAB WEBSITE<i class="fa fa-angle-double-right"></i></a> <br>
-        <a href="download/app project4.pdf" target="_blank">PLANNING <i class="fa fa-angle-double-right"></i></a><br><br> <br><br><br>
-        <!-- <a href="https://kskas01.wixsite.com/glossyworld" target="_blank">GLOSSYWORLD  WEBSITE<i class="fa fa-angle-double-right"></i></a><br>
-        <a href="https://kskas01.wixsite.com/glossyworld" target="_blank">PLANNING  <i class="fa fa-angle-double-right"></i></a> -->
+        <a href="download/WEB project2.pdf" target="_blank">PLANNING<i class="fa fa-angle-double-right"></i></a><br><br> <br><br><br>
+        <a href="https://kskas01.wixsite.com/glossyworld" target="_blank">GLOSSYWORLD  WEBSITE<i class="fa fa-angle-double-right"></i></a><br>
+        <a href="download/WEB PROJEXT3.pdf" target="_blank">PLANNING<i class="fa fa-angle-double-right"></i></a><br><br> <br><br><br>
 
       </div>
       <div class="p2-img main">
 
       </div>
-      <div class="p3 main">
-        <div class="arti"></div>
+      <div class="p3 main" id="page3">
+        <div class="arti3"></div>
         <h2>03 <br> CORDING PROJECT</h2><br><br>
         <p>- 코딩 프로젝트입니다.</p>
-        <a href="http://www.dabipyeung.com/hmedia/team_02/" target="_blank">VIEW WEBSITE  <i class="fa fa-angle-double-right"></i></a>
+        <a href="http://www.dabipyeung.com/hmedia/team_02/" target="_blank">VIEW WEBSITE <i class="fa fa-angle-double-right"></i></a>
       </div>
       <div class="p3-img main">
         <span></span>
       </div>
-      <div class="p4 main">
+      <div class="p4 main" id="page4">
+        <div class="arti4"></div>
         <h2>04 <br> CONTEST PROJECT </h2><br><br>
         <p>- 공모전 프로젝트입니다.</p>
-        <a href="download/app project5.pdf" target="_blank">THANKS BOX  <i class="fa fa-angle-double-right"></i></a> <br> <br>
+        <a href="download/app project5.pdf" target="_blank">THANKS BOX <i class="fa fa-angle-double-right"></i></a> <br> <br>
       </div>
       <div class="p4-img main">
 
@@ -99,7 +88,64 @@
 
     </div>
 
+    <script type="text/javascript">
+      $(document).ready(function(){
 
+
+        $(window).on("scroll", function(){
+          var scl = $(window).scrollTop();
+          var wid = $(window).height();
+          var nowTop = $(this).index() * wid;
+
+          if(scl >= (wid-100) * 1 && scl < (wid-100) * 2){
+            $(".arti1").stop().animate({"left":"-100%"}, 500);
+          } else if(scl >= (wid-100) * 2 && scl < (wid-100) * 3){
+            $(".arti2").stop().animate({"left":"-100%"}, 500);
+          } else if(scl >= (wid-100) * 3 && scl < (wid-100) * 4){
+            $(".arti3").stop().animate({"left":"-100%"}, 500);
+          } else if(scl >= (wid-100) * 4 && scl < (wid-100) * 5){
+            $(".arti4").stop().animate({"left":"-100%"}, 500);
+          }
+
+
+          if(scl > 0){
+            $(".clone-header").stop().animate({
+              "height":"80px"
+            });
+
+            $(".clone-header>ul").stop().animate({
+              "height":"60px"
+            });
+            $(".clone-header>ul>li").stop().animate({
+              "padding-top":"10px"
+            });
+          } else {
+            $(".clone-header").stop().animate({
+              "height":"120px"
+            });
+
+            $(".clone-header>ul").stop().animate({
+              "height":"100px"
+            });
+            $(".clone-header>ul>li").stop().animate({
+              "padding-top":"30px"
+            });
+          }
+
+        });
+
+        $(".clone-header li").on("click", function(e){
+          e.preventDefault();
+          var scl = $(window).scrollTop();
+          var wid = $(window).height();
+          var list = $(".main").height(wid);
+          var nowTop = $(this).index() * wid;
+          $("html,body").stop().animate({"scrollTop":nowTop}, 1000);
+        });
+
+
+        });
+    </script>
 
   </body>
 </html>

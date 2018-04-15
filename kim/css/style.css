@@ -27,14 +27,14 @@ a:hover{text-decoration:none;}
   color:white;
     font-size: 60px;
   padding-left:2px;
-  padding-top:10%;
+  padding-top:15%;
   margin-bottom:0px;
-  left: 10%;
+  left: 5%;
 
 }
 
-.t1{font-size: 140px;}
-.t2{position: absolute; left: 5%; font-size: 40px;margin-top: 25s0px;letter-spacing: 0.5em;}
+.t1{font-size: 140px;letter-spacing: 0.2EM;left: 7%;}
+.t2{position: absolute; left: 10%; font-size: 40px;margin-top:160px;letter-spacing: 0.5em;}
 
 .font-effect-neon .t2{
   text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f,0 0 0.6em #3d58ff, 0 0 0.8em #3d58ff, 0 0 1.0em #3d58ff, 0 0 1.2em #f0f!important;
@@ -46,10 +46,11 @@ a:hover{text-decoration:none;}
 .wrap>div:nth-child(1){width:100%;}
 
 
-.main{width: 100%; height: 900px; background: url(../img/main.jpg) no-repeat right; background-size: contain; background-color: #060405;}
+.main{width: 100%; height: 900px; background: url(../img/main.jpg) no-repeat right; background-size: contain; background-color: #060405; position:relative;}
 h1{font-size: 100px; font-family:gugi; color: #fff; width: 30%; margin: 160px; auto; margin-top: 400px; left: 20px; letter-spacing: 0.1em;}
+.main>.arti1, .main>.arti2, .main>.arti3, .main>.arti4{width:100%; height:100%; background:#000; opacity:0.8; position:absolute; left:0; top:0; z-index:100;}
 
-.main p{font-size:30px;color:#000;margin-left: 80px;font-family:Hi Melody;color: BLACK;}
+.main p{font-size:30px;color:#000;margin-left: 80px;font-family:Gugi; color: BLACK;font-weight: bold;}
 
 H4{font-size: 20PX;margin-left: 240PX;font-family: Gugi;}
 .p1{background: #f6e6f8;}
@@ -77,11 +78,15 @@ H4{font-size: 20PX;margin-left: 240PX;font-family: Gugi;}
 h2{font-size: 40px; font-family: gugi; color: #4224f4; width: 50%; margin-left: 10%;auto; margin-top: 20%;letter-spacing: 0.3em; }
 
 
-a{text-decoration: none; font-size: 28PX;; color: #000; margin-left: 46%; font-family: gugi; position: relative; top: 30PX; letter-spacing: 0.1em;}
+a{text-decoration: none; font-size: 28PX;; color: #fff; margin-left: 46%; font-family: gugi; position: relative; top: 30PX; letter-spacing: 0.1em;;}
+.main a{text-decoration: none; font-size: 28PX;; color: #000; margin-left: 46%; font-family: gugi; position: relative; top: 30PX; letter-spacing: 0.1em;;}
 
-i{font-size: 120px; color: #000; position: relative; left: 20px; animation:ani linear 1.5s 1.0s infinite;}
+i{font-size: 120px; color: #060405; position: relative; left: 20px; animation:ani linear 1.5s 1.0s infinite;}
 
-
+.clone-header{width:100%; height:95px; background:#fff; position:fixed; top:0; left:0; z-index:150;background: #060405;}
+.clone-header>ul{width:80%; height:90px; margin:auto; background:#060405; list-style:none;}
+.clone-header>ul>li{width:20%; height:90px; text-align:center; float:left; box-sizing:border-box; padding-top:30px;}
+.clone-header>ul>li>a{margin:0; padding:0; top:0;}
 @keyframes ani {
    0%{
      left: 0;

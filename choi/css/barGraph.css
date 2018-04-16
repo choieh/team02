@@ -1,22 +1,29 @@
 /* Bar Graph Class */
 .graphFid{
   border: 1px solid silver;
-  width: 80%;
-  height: 50%;
+  width: 85%;
+  height: auto;
   margin: 2%;
+  max-width: 95%;
+}
+.graphFid>i{
+  margin-left: 48%;
+  margin-top: 5%;
+  font-size: 5em;
 }
 
 .barGraph {
   position: relative;
   width: 100%;
   height: auto;
-  margin-bottom: 50px;
-  max-width: 1200px;
+  margin-top: 5%;
+  max-width: 95%;
 
 }
 .barGraph h3{
-  width: 96%;
-  margin-left: 50px;
+  width: 86%;
+  margin-left: 8%;
+  font-size: 1.5em;
 }
 .graph {
   position: relative;

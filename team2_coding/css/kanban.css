@@ -181,3 +181,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
   filter: alpha(opacity=20);
 }
+
+@media screen and (max-width: 50em) {
+  
+}

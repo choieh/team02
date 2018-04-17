@@ -216,25 +216,9 @@ a {
   text-decoration: none;
 }
 
-/* .con1{
+@media screen and (max-width: 50em) {
 
 }
-.con2{
-
-}
-.con3{
-  background: #333;
-}
-.con4{
-  background: #444;
-}
-.con5{
-  background: #555;
-}
-.con6{
-  background: #555;
-} */
-
 
 
 

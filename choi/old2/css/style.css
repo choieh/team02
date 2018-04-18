@@ -1,0 +1,51 @@
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+.tip{
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 1.5em;
+<<<<<<< HEAD
+  margin-left: 5%;
+  padding-top: 5%;
+}
+.des>p>a{
+  color: #ddd;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 50em) {
+
+}
+=======
+}
+
+.position_up{
+  position: fixed;
+  right: 2%;;
+  bottom: 5%;
+  z-index: 100;
+  display: none;
+  cursor: pointer;
+}
+>>>>>>> fdd960bfa0742f7d0951d9d81b429a6d81baa549
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
